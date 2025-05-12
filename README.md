@@ -51,7 +51,7 @@ README.md
 
 Install required packages via:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ---
 
