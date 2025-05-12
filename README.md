@@ -34,13 +34,17 @@ The dataset `reviews.csv` contains 18,442 customer reviews with the following fi
 ## 📁 Project Structure
 ---
 
-.
-├── data/
-│   └── reviews.csv             # Customer reviews dataset
-├── starter/
-│   └── starter.ipynb      # Jupyter notebook with all steps in one place
-├── requirements.txt            # List of required Python packages
-└── README.md                   # Project overview and usage instructions
+data/
+    • reviews.csv – Customer reviews dataset containing text, customer details, and recommendation labels.
+    
+starter/
+    • starter_notebook.ipynb - A Jupyter Notebook that combines EDA, data preprocessing, model training, and evaluation in one place.
+
+requirements.txt
+    • Lists all Python libraries required to run the project.
+
+README.md
+    • Project documentation and usage instructions.
 
 
 ## 🔍 EDA (Exploratory Data Analysis)
