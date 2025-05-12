@@ -53,6 +53,4 @@ We built a machine learning pipeline using `scikit-learn`:
 - **Model Evaluation Metric**: `Accuracy` 
 - **Fine-Tuning**: `RandomizedGridSearch` 
 
-The model was evaluated using `accuracy`.
-
 ---
