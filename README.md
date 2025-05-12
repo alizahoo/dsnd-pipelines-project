@@ -1,55 +1,56 @@
-# README Template
+# StyleSense Review Recommendation Model
 
-Below is a template provided for use when building your README file for students.
+Welcome to the **StyleSense** machine learning project! This project aims to predict whether a customer would recommend a clothing item based on their review, age, product category, and other metadata.
 
-# Project Title
+---
 
-Project description goes here.
+## 📌 Objective
 
-## Getting Started
+StyleSense, a growing online women's fashion retailer, is facing a challenge: many customer reviews are missing the "Recommended" label. Our goal is to use reviews with complete data to train a machine learning model that can predict this missing information. This will help:
+- Improve product recommendations
+- Understand customer sentiment
+- Identify top-performing items
 
-Instructions for how to get a copy of the project running on your local machine.
+---
 
-### Dependencies
+## 📁 Dataset Overview
 
-```
-Examples here
-```
+The dataset `reviews.csv` contains 18,442 customer reviews with the following fields:
 
-### Installation
+| Column Name                | Description                                   |
+|----------------------------|-----------------------------------------------|
+| `Clothing ID`              | Unique ID for each product                    |
+| `Age`                      | Age of the customer                           |
+| `Title`                    | Short review title                            |
+| `Review Text`              | Full customer review                          |
+| `Positive Feedback Count`  | Count of helpful votes for a review           |
+| `Division Name`            | Broad category (e.g., General, Petite)        |
+| `Department Name`          | Specific department (e.g., Tops, Dresses)     |
+| `Class Name`               | Product class (e.g., Knits, Blouses)          |
+| `Recommended IND`          | **Target** — 1 = Recommended, 0 = Not         |
 
-Step by step explanation of how to get a dev environment running.
+---
 
-List out the steps
+## 🔍 EDA (Exploratory Data Analysis)
 
-```
-Give an example here
-```
+We performed EDA to understand:
+- Distribution of age and feedback
+- Frequency of each product category
+- Text length in reviews
+- Class imbalance in recommendation labels
 
-## Testing
+---
 
-Explain the steps needed to run any automated tests
+## 🧪 Model Pipeline
 
-### Break Down Tests
+We built a machine learning pipeline using `scikit-learn`:
 
-Explain what each test does and why
+- **Numerical Features**: Scaled with `StandardScaler`
+- **Categorical Features**: Encoded using `OneHotEncoder`
+- **Text Reviews**: Transformed with `TfidfVectorizer`
+- **Feature Engineering**: `SpacyLemmatizer`, `CharacterCount()`
+- **Model**: `RandomForestClassifier` 
+- **Model Evaluation Metric**: `Accuracy` 
+- **Fine-Tuning**: `RandomizedGridSearch` 
 
-```
-Examples here
-```
-
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
-
-[License](LICENSE.txt)
+---
