@@ -32,7 +32,6 @@ The dataset `reviews.csv` contains 18,442 customer reviews with the following fi
 ---
 
 ## 📁 Project Structure
----
 
 data/
     • reviews.csv – Customer reviews dataset containing text, customer details, and recommendation labels.
@@ -46,6 +45,15 @@ requirements.txt
 README.md
     • Project documentation and usage instructions.
 
+---
+
+## 🧪 Requirements
+
+Install required packages via:
+
+pip install -r requirements.txt
+
+---
 
 ## 🔍 EDA (Exploratory Data Analysis)
 
